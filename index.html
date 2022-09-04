@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+      defer
+    ></script>
     <script src="js/script.js" defer></script>
     <title>EJ Fernando</title>
   </head>
@@ -22,6 +30,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact Me</a></li>
+        <div class="hamburger"><a href="#home"><img src="images/icons/icons8-menu-480.png"/></a></div>
       </ul>
     </nav>
     <main>
@@ -29,7 +38,7 @@
         <div class="container">
           <div class="profile-content">
             <h1>Hi, I'm Earl</h1>
-            <h2>I'm a Full Stack Web Developer</h2>
+            <h2>I'm an aspiring Full Stack Developer</h2>
             <h3>
               Let's talk @
               <span class="email">the.josephfernando@gmail.com</span>
@@ -47,7 +56,9 @@
               <a href="#" target="_blank"
                 ><img src="images/icons/instagram.png"
               /></a>
-              <a href="#" target="_blank">Learn more</a>
+            </div>
+            <div class="learn-more">
+              <a href="#about" class="button is-rounded">Learn more</a>
             </div>
           </div>
           <div class="img-container">
@@ -58,7 +69,7 @@
       <section id="about">
         <div class="container about-container">
           <header>
-            <h1>Who I am</h1>
+            <h1>About Me</h1>
           </header>
           <div class="about-details">
             <div class="about-detail left">
@@ -108,61 +119,64 @@
             </ul>
           </div>
           <div class="skills-logo">
-            <img src="images/logos/skills.png" alt="" />
+            <img src="images/programming/programming1.gif" alt="" />
           </div>
         </div>
       </section>
       <section id="experience">
         <div class="container">
-          <div>
+          <header>
             <h1>Experience</h1>
-          </div>
-          <div class="left">
-            <div class="job-name">
-              <h2>Full Stack Web Developer</h2>
-              <h2>trainee</h2>
-              <h3 class="experience-company">Streamline | 2022</h3>
+          </header>
+          <div class="jobs">
+            <div class="left">
+              <div class="job-name">
+                <h2>Full Stack Web Developer</h2>
+                <h2>trainee</h2>
+                <h3 class="experience-company">Streamline | 2022</h3>
+              </div>
+
+              <ul>
+                <li>
+                  - Underwent intensive remote full stack web development
+                  training under the supervision of senior developers
+                </li>
+                <li>
+                  - Reported attendance, provided output, and joined mentoring
+                  sessions daily while completing training courses
+                </li>
+                <li>
+                  - Training topics include advanced NodeJS, Express, MySQL,
+                  React, WebRTC
+                </li>
+                <li>
+                  - Submitted a project as a final assessment at the end of the
+                  training
+                </li>
+              </ul>
             </div>
 
-            <ul>
-              <li>
-                - Underwent intensive remote full stack web development training
-                under the supervision of senior developers
-              </li>
-              <li>
-                - Reported attendance, provided output, and joined mentoring
-                sessions daily while completing training courses
-              </li>
-              <li>
-                - Training topics include advanced NodeJS, Express, MySQL,
-                React, WebRTC
-              </li>
-              <li>
-                - Submitted a project as a final assessment at the end of the
-                training
-              </li>
-            </ul>
-          </div>
+            <div class="right">
+              <div class="job-name">
+                <h2>Intern Field Writer</h2>
+                <h3 class="experience-company">
+                  Philippine Sports Commission | 2019
+                </h3>
+              </div>
 
-          <div class="right">
-            <div class="job-name">
-              <h2>Intern Field Writer</h2>
-              <h3 class="experience-company">
-                Philippine Sports Commission | 2019
-              </h3>
+              <ul>
+                <li>
+                  - Wrote sports stories about Region IV-A athletes competing in
+                  Davao
+                </li>
+                <li>
+                  - Worked with a group of journalists from the region to
+                  provide daily outputs to the regional office
+                </li>
+                <li>- Published sports articles onto the DepEd website</li>
+              </ul>
+              
             </div>
-
-            <ul>
-              <li>
-                - Wrote sports stories about Region IV-A athletes competing in
-                Davao
-              </li>
-              <li>
-                - Worked with a group of journalists from the region to provide
-                daily outputs to the regional office
-              </li>
-              <li>- Published sports articles onto the DepEd website</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -173,7 +187,7 @@
             <h3>Take a look at my portfolio</h3>
           </header>
           <div class="projects-container">
-            <a class="project-container">
+            <div class="project-container">
               <div class="project-img">
                 <img
                   src="images/projects/happy doughbites website.jpg"
@@ -189,13 +203,9 @@
                   <strong>Flask, JQuery, SQLAlchemy</strong>
                 </p>
               </div>
-            </a>
+            </div>
 
-            <a
-              class="project-container"
-              href="https://josephjj1020.github.io/nursle/"
-              target="_blank"
-            >
+            <div class="project-container">
               <div class="project-img">
                 <img src="images/projects/nursle.jpg" alt="" />
                 <div class="project-name">
@@ -205,15 +215,16 @@
               <div class="project-description">
                 <p>
                   Inspired by Wordle; nursing-related quiz game with
-                  <strong>vanilla JS</strong>
+                  <strong>vanilla JS</strong>.
+                  <a
+                    href="https://josephjj1020.github.io/nursle/"
+                    target="_blank"
+                    >Go to site</a
+                  >
                 </p>
               </div>
-            </a>
-            <a
-              class="project-container"
-              href="https://josephjj1020.github.io/tictactoe-react/"
-              target="_blank"
-            >
+            </div>
+            <div class="project-container">
               <div class="project-img">
                 <img src="images/projects//tictactoe_react.jpg" alt="" />
                 <div class="project-name">
@@ -223,15 +234,17 @@
               <div class="project-description">
                 <p>
                   Tic Tac Toe game made with <strong>React</strong>; implements
-                  minimax algorithm for AI
+                  minimax algorithm for AI.
+                  <a
+                    href="https://josephjj1020.github.io/tictactoe-react/"
+                    target="_blank"
+                    >Go to site</a
+                  >
                 </p>
               </div>
-            </a>
-            <a
-              class="project-container"
-              href="https://github.com/josephJJ1020/tictactoe-pygame"
-              target="_blank"
-            >
+            </div>
+            <div class="project-container">
+              <!--  -->
               <div class="project-img">
                 <img src="images/projects/tictactoe1.png" alt="" />
                 <div class="project-name">
@@ -241,15 +254,17 @@
               <div class="project-description">
                 <p>
                   Tic Tac Toe game made with <strong>Pygame</strong>; ;
-                  implements minimax algorithm for AI
+                  implements minimax algorithm for AI.
+                  <a
+                    href="https://github.com/josephJJ1020/tictactoe-pygame"
+                    target="_blank"
+                    >Go to site</a
+                  >
                 </p>
               </div>
-            </a>
-            <a
-              class="project-container"
-              href="https://github.com/josephJJ1020/Google-Classroom-Deadline-Notifications-using-Classroom-API-and-win10toast-"
-              target="_blank"
-            >
+            </div>
+            <div class="project-container">
+              <!-- -->
               <div class="project-img">
                 <img src="images/projects/classroom notifier.png" alt="" />
                 <div class="project-name">
@@ -260,11 +275,16 @@
                 <p>
                   Script that reports due activities; made with
                   <strong>Win10Toast</strong> and
-                  <strong>Google Classroom API</strong>
+                  <strong>Google Classroom API</strong>.
+                  <a
+                    href="https://github.com/josephJJ1020/Google-Classroom-Deadline-Notifications-using-Classroom-API-and-win10toast-"
+                    target="_blank"
+                    >Go to site</a
+                  >
                 </p>
               </div>
-            </a>
-            <a class="project-container" href="" target="_blank">
+            </div>
+            <div class="project-container" href="" target="_blank">
               <div class="project-img">
                 <img src="images/projects/makenewtxt.png" alt="" />
                 <div class="project-name">
@@ -277,12 +297,9 @@
                   <strong>Python</strong>
                 </p>
               </div>
-            </a>
-            <a
-              class="project-container"
-              href="https://github.com/josephJJ1020/snake-pygame"
-              target="_blank"
-            >
+            </div>
+            <div class="project-container">
+              <!-- " -->
               <div class="project-img">
                 <video autoplay muted loop>
                   <source src="images/projects/snake.mp4" type="video/mp4" />
@@ -292,9 +309,16 @@
                 </div>
               </div>
               <div class="project-description">
-                <p>Simple snake game made with <strong>Pygame</strong></p>
+                <p>
+                  Simple snake game made with <strong>Pygame</strong
+                  ><a
+                    href="https://github.com/josephJJ1020/snake-pygame"
+                    target="_blank"
+                    >Go to site</a
+                  >
+                </p>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
@@ -305,7 +329,7 @@
             <h2>Let's collaborate</h2>
           </div>
           <form autocomplete="off">
-            <h2>My form</h2>
+            <h3>Send a Message</h3>
             <div class="detail">
               <label for="name">Your Name</label>
               <input
@@ -334,12 +358,14 @@
                 placeholder="Tell me something I didn't know"
               ></textarea>
             </div>
-            <input type="submit" value="submit">
+            <input type="submit" value="submit" />
           </form>
         </div>
       </section>
     </main>
     <!-- <a href="https://www.freepik.com/free-photo/crumpled-paper-background_1273351.htm#query=newspaper%20background&position=1&from_view=keyword">Image by aopsan</a> on Freepik -->
-    <footer>Earl Joseph C. Fernando &nbsp; | &nbsp; All Rights Reserved 2022</footer>
+    <footer>
+      Earl Joseph C. Fernando |  All Rights Reserved 2022
+    </footer>
   </body>
 </html>
