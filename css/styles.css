@@ -185,7 +185,7 @@ footer {
 /* about */
 #about {
   min-height: 100vh;
-  background-image: url("/images/backgrounds/paper.jpg");
+  background-image: url("../images/backgrounds/paper.jpg");
 }
 
 .about-container:after {
