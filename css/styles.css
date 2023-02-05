@@ -57,12 +57,12 @@ input {
   background-color: transparent;
   outline: none;
   border: none;
-  border: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 input:focus,
 textarea:focus {
-  border: 1px solid steelblue;
+  border-bottom: 1px solid steelblue;
 }
 
 input[type="submit"] {
@@ -80,10 +80,11 @@ input[type="submit"]:active {
 }
 
 textarea {
+  border: none;
   margin-top: 10px;
   background-color: black;
   resize: none;
-  border: 1px solid white;
+  border-bottom: 1px solid white;
   height: 100px;
 }
 /* nav & footer */
@@ -473,6 +474,10 @@ footer {
 } */
 
 /* contact */
+#contact {
+  height: 85vh;
+}
+
 #contact .container {
   display: flex;
   align-items: center;
